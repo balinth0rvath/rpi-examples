@@ -1,0 +1,19 @@
+#
+# Generic power capping sysfs interface configuration
+#
+menuconfig DEVTEST
+	bool "DEVTEST"
+	help
+		Device driver tests
+
+if DEVTEST 
+
+config DEVTEST_GPIO
+	tristate "BCM2837 GPIO driver"
+	depends on ARM
+	default m
+	---help---
+	etc
+
+endif # DEVTEST
+
